@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script src="jquery-1.11.3.js"></script>
+	<script src="validateJS.js"></script>
+	<script src="app.js"></script>
+	
+	<style>
+		form div{
+			padding : 10px 10px;	
+		}
+	</style>
+</head>
+<body>
+
+<form name="searcher">
+	<div>
+		Number of days:<input type="text" name="numDays" value="2">
+		<span id="msg-numDays" class="errorMessage"></span>
+		<span id="msg-customValNumDays" class="errorMessage"></span>
+	</div>
+	
+	<div>
+		Start date:<input type="text" name="startDate" value="26/08/2015"/><span id="msg-startDate"></span>
+	</div>
+	<div>
+		End date:<input type="text" name="endDate" value="12/02/2015"/><span id="msg-endDate"></span>
+		<span id="msg-startEnd" class="errorMessage"></span>
+	</div>
+	
+	<div>
+		Password:<input type="text" name="password">
+		<span id="msg-password"></span>
+	</div>
+	
+	<div>
+		Select Country:
+		<select name="country">
+			<option value="-1"></option>
+			<option value="PRS">Paris</option>
+			<option value="LND">London</option>
+			<option value="ESP">Spain</option>
+			<option value="ITA">Italy</option>
+		</select>
+		<span id="msg-country" class="errorMessage"></span>
+	</div>
+	
+	<div>
+	
+	<input type="checkbox" name="extras" value="ONE"/>One way
+	<br>
+	<input type="checkbox" name="extras" value="RET"/>Return
+	<br>
+	<span id="msg-extras" class="errorMessage"></span>
+	</div>
+	
+	<div>
+		Any suggestions? <input type="text" name="comment" placeholder="Write something ..."/>
+		<p id="msg-comment" class="errorMessage"></p>
+	</div>
+	
+	<div>
+		Rate this site <input type="range" id="rating" name="rating" value="50" step="5" min="0" max="100"/>
+		<input id="ratingVisor" type="text" readonly />
+	</div>
+	
+	<div>
+		<input type="button" id="checkIt" value="Check!"/>
+	</div>
+</form>
+
+</body>
+</html>
